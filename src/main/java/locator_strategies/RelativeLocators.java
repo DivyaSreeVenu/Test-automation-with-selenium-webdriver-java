@@ -11,8 +11,8 @@ public class RelativeLocators extends Main {
   @SuppressWarnings("unused")
   public static void main(String[] args) {
     driver.get("https://www.selenium.dev/selenium/web/formPage.html");
-
-
+    WebElement bottombtn = driver.findElement(
+        RelativeLocator.with(By.name("submit")).below(By.id("submit")));
 
     driver.quit();
   }
